@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eligible Student List</title>
+</head>
+<body>
+
+<h1>Eligible Student List</h1>
+
+{% if st_list %}
+    <table>
+        
+        {% for student in st_list %}
+            <tr>
+                <td>{{ student.0 }}</td>
+                <td>{{ student.1 }}</td>
+                <td>{{ student.2 }}</td>
+                <td>{{ student.3 }}</td>
+                <td>{{ student.4}}</td>
+                <td>{{ student.5 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No eligible students found.</p>
+{% endif %}
+
+</body>
+</html>
